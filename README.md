@@ -31,11 +31,11 @@ This is a visually appealing and interactive website for Refokus. It showcases t
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/refokus-website.git
+   git clone https://github.com/Amanc77/Refokus.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd refokus-website
+   cd Refokus
    ```
 3. Install dependencies (if using a package manager like npm or yarn):
    ```bash
@@ -54,3 +54,6 @@ If you want to contribute, please fork the repository and submit a pull request.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Repository Link
+[GitHub Repository](https://github.com/Amanc77/Refokus)

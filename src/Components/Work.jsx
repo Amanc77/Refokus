@@ -29,8 +29,8 @@ function Work() {
     },
     {
       url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0ac7e7179d210dc41f0_Summon.png",
-      top: "43%",
-      left: "40%",
+      top: "45%",
+      left: "46%",
       isActive: false,
     },
     {
@@ -45,8 +45,8 @@ function Work() {
 
   scrollYProgress.on("change", (data) => {
     function showImages(arr) {
-      setImages((prev) =>
-        prev.map((item, index) =>
+      setImages((previousImages) =>
+        previousImages.map((item, index) =>
           arr.indexOf(index) === -1
             ? { ...item, isActive: false }
             : { ...item, isActive: true }

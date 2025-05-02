@@ -1,8 +1,13 @@
 # Refokus Website
 
-Refokus  website features a modern UI with smooth animations and engaging interactions.
+Refokus website features a modern UI with smooth animations and engaging interactions.
+
+## Live Demo
+
+Check out the live version of the website here: [Refokus Website](https://refokusweb.netlify.app/)
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -10,11 +15,14 @@ Refokus  website features a modern UI with smooth animations and engaging intera
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Repository Link](#repository-link)
 
 ## Overview
+
 This is a visually appealing and interactive website for Refokus. It showcases the agency's work, services, and contact details with smooth animations and a well-designed UI.
 
 ## Features
+
 - Home, Work, Services, and Contact pages
 - Interactive UI with smooth animations
 - Case Studies section
@@ -23,12 +31,17 @@ This is a visually appealing and interactive website for Refokus. It showcases t
 - Engaging motion effects
 
 ## Technologies Used
+
 - HTML
-- CSS (TailwindCSS/Bootstrap)
+- CSS (TailwindCSS)
 - JavaScript
-- React (if applicable)
+- React
+- React Router (for navigation)
+- Framer Motion (for animations)
+- React Icons (for icons)
 
 ## Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/Amanc77/Refokus.git
@@ -43,17 +56,19 @@ This is a visually appealing and interactive website for Refokus. It showcases t
    ```
 
 ## Usage
+
 To start the development server, run:
+
 ```bash
-npm start  # or yarn start
+npm run dev  # or yarn start
 ```
+
 Open your browser and go to `http://localhost:3000/`.
 
 ## Contributing
+
 If you want to contribute, please fork the repository and submit a pull request.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ## Repository Link
+
 [GitHub Repository](https://github.com/Amanc77/Refokus)

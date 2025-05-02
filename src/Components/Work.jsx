@@ -37,7 +37,7 @@ function Work() {
       url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0af108a465002975acd_Showcase%20Websites%20(1).png",
       top: "65%",
       left: "55%",
-      isActive: 1,
+      isActive: false,
     },
   ]);
 
@@ -74,28 +74,36 @@ function Work() {
         showImages([0, 1, 2, 3, 4]);
         break;
       case 9:
-        showImages([0, 1, 2, 3, 4, 5, 6]);
+        showImages([0, 1, 2, 3, 4, 5]);
         break;
     }
   });
+
   return (
-    <div className=" w-full">
-      <div className=" relative  max-w-screen-xl mx-auto  text-center">
-        <h1 className=" text-[28vw] text-white font-medium  tracking-tight select-none">
+    <div className="w-full">
+      <div className="relative max-w-screen-xl mx-auto text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-[50vw] sm:text-[28vw] text-white font-medium tracking-tight select-none"
+        >
           work
-        </h1>
-        <div className=" absolute top-0 w-full h-full ">
+        </motion.h1>
+        <div className="absolute top-0 w-full h-full">
           {images.map(
             (image, index) =>
               image.isActive && (
-                <img
+                <motion.img
                   key={index}
-                  className={`w-60 absolute rounded-lg -translate-x-[50%] -translate-y-[50%]`}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="w-40 sm:w-60 absolute rounded-lg -translate-x-[50%] -translate-y-[50%]"
                   src={image.url}
                   style={{
-                    top: `${image.top}`,
-                    left: `${image.left}`,
-                    //   opacity: image.isActive ? 1 : 0.5,
+                    top: image.top,
+                    left: image.left,
                   }}
                   alt="image"
                 />

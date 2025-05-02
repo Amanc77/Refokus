@@ -30,7 +30,7 @@ const Stripes = () => {
   ];
 
   return (
-    <div className="flex items-center text-white mb-10">
+    <div className="flex flex-col sm:flex-row items-center text-white mb-10">
       {data.map((elem, index) => (
         <Stripe key={index} val={elem} />
       ))}

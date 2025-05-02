@@ -10,37 +10,40 @@ const Marquee = ({ imagesUrl, direction }) => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex">
-        {/* First set of images */}
         <motion.div
           initial={{ x: direction === "left" ? 0 : -totalWidthPerSet + "vw" }}
           animate={{ x: direction === "left" ? -totalWidthPerSet + "vw" : 0 }}
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
-          className="flex flex-shrink-0 gap-20 py-8"
+          className="flex flex-shrink-0 gap-10 sm:gap-20 py-8"
           style={{ width: `${totalWidthPerSet}vw` }}
         >
           {imagesUrl.map((url, index) => (
-            <img
+            <motion.img
               key={`first-${index}`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               src={url}
-              className="w-[8vw] h-auto object-contain"
+              className="w-[6vw] sm:w-[8vw] h-auto object-contain"
               alt={`marquee-${index}`}
             />
           ))}
         </motion.div>
-
-        {/* Second set of images for seamless looping */}
         <motion.div
           initial={{ x: direction === "left" ? 0 : -totalWidthPerSet + "vw" }}
           animate={{ x: direction === "left" ? -totalWidthPerSet + "vw" : 0 }}
           transition={{ ease: "linear", duration: 15, repeat: Infinity }}
-          className="flex flex-shrink-0 gap-20 py-8"
+          className="flex flex-shrink-0 gap-10 sm:gap-20 py-8"
           style={{ width: `${totalWidthPerSet}vw` }}
         >
           {imagesUrl.map((url, index) => (
-            <img
+            <motion.img
               key={`second-${index}`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               src={url}
-              className="w-[8vw] h-auto object-contain"
+              className="w-[6vw] sm:w-[8vw] h-auto object-contain"
               alt={`marquee-${index}`}
             />
           ))}

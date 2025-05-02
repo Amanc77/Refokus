@@ -1,22 +1,28 @@
 import React from "react";
-import Nav from "./Components/Nav";
-import Work from "./Components/Work";
-import Stripes from "./Components/Stripes";
-import Products from "./Components/Products";
-import Marquees from "./Components/Marquees";
-import Cards from "./Components/Cards";
-import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import WorkPage from "./Components/WorkPage";
+import ServicesPage from "./Components/ServicesPage";
+import ContactPage from "./Components/ContactPage";
+
 function App() {
   return (
-    <div className=" bg-gray-950 min-h-screen  text-white">
-      <Nav />
-      <Work />
-      <Stripes />
-      <Products />
-      <Marquees />
-      <Cards />
-      <Footer />
-    </div>
+    <Router>
+      <div className="bg-gray-950 min-h-screen text-white overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route
+            path="*"
+            element={
+              <div className="p-5 text-center">404 - Page Not Found</div>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
